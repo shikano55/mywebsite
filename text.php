@@ -10,7 +10,7 @@
 <body>
 
 	<div class="header">
-		<img src="dmp_room_black.png" id="picture">
+		<img src="画像のファイル名" id="picture">
 	</div>
 
 	<div class="next-header" id="next_header">
