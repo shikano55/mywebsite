@@ -99,7 +99,7 @@
 
 			<?php
 						try{
-								$dbh = new PDO('mysql:host=localhost;dbname=データベース名','ユーザ名','パスワード');
+								$dbh = new PDO('データベースの種類:host=localhost;dbname=データベース名','ユーザ名','パスワード');
 						}catch (PDOException $e){
 								var_dump($e->getMessage());
 								exit;
