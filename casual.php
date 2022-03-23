@@ -81,7 +81,7 @@
 						nav2.style.top = "0";
 						nav2.style.marginbottom = "0px";
 					}else{
-						// ナビゲーションを上側に表示
+						// ナビゲーションを下側に表示
 						let nav = document.getElementById("top_nav");
 						nav.remove();
 						let nav2 = document.getElementById("bottom_nav");
