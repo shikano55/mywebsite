@@ -112,14 +112,14 @@
 
 			<?php
 				if(!empty($_POST["data"])){
-					$set = $dbh->prepare("insert into dmp2 (text,date) values(?,?)");
+					$set = $dbh->prepare("insert into テーブル名 (text,date) values(?,?)");
 					$set->execute(array($_POST["data"],date("Y年m月d日 H:i")));
 
 					header('Location: ./casual');
 				}
 
 				$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-				$sql = "select * from dmp2";
+				$sql = "select * from テーブル名";
 				$stmt = $dbh->query($sql);
 
 				$array_data = array(array("ここが最終ページ",""));
