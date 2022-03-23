@@ -105,15 +105,15 @@
 				file_put_contents('counter.txt',$count);
 
 				if(!empty($_POST["data"])){
-					$set = $dbh->prepare("insert into dmp (text,date) values(?,?)");
+					$set = $dbh->prepare("insert into テーブル名 (text,date) values(?,?)");
 					$set->execute(array($_POST["data"],date("Y年m月d日 H:i")));
 					header('Location: ./');
 				}
 
 				$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-				$sql = "select * from dmp";
+				$sql = "select * from テーブル名";
 				$stmt = $dbh->query($sql);
-				//my test part
+				
 				$array_data = array(array("ここが最終ページ",""));
 				while($result=$stmt->fetch()){
 					array_unshift($array_data, array($result[0],$result[1]));
@@ -121,11 +121,9 @@
 
 				foreach($array_data as $value){
 					echo '<div class="db_text">';
-					// echo nl2br($value[0]);
 					echo nl2br(htmlentities($value[0]));
 					echo "<br><br>";
 					echo '<p class="date_text">';
-					// echo nl2br($value[1]);
 					echo nl2br(htmlentities($value[1]));
 					echo '</p>';
 					echo '</div>';
