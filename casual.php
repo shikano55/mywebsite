@@ -14,7 +14,7 @@
 	?>
 
 	<div class="header">
-		<img src="dmp_room_black.png" id="picture">
+		<img src="画像のファイル名" id="picture">
 	</div>
 
 
@@ -99,7 +99,7 @@
 
 			<?php
 						try{
-								$dbh = new PDO('mysql:host=localhost;dbname=test','myosrspi','mark6popo!!443');
+								$dbh = new PDO('mysql:host=localhost;dbname=データベース名','ユーザ名','パスワード');
 						}catch (PDOException $e){
 								var_dump($e->getMessage());
 								exit;
